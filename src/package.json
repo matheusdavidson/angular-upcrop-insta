@@ -1,0 +1,28 @@
+{
+  "name": "angular-upcrop-insta",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matheusdavidson/angular-upcrop-insta"
+  },
+  "author": {
+    "name": "Matheus Davidson",
+    "email": "matheusdavidson@gmail.com"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matheusdavidson/angular-upcrop-insta/issues"
+  },
+  "main": "angular-upcrop-insta.umd.js",
+  "module": "angular-upcrop-insta.js",
+  "jsnext:main": "angular-upcrop-insta.js",
+  "typings": "angular-upcrop-insta.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^4.0.0",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  }
+}
