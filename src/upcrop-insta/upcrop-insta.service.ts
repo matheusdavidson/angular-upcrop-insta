@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { MdDialog } from "@angular/material";
 import { UpcropInstaDialogComponent } from "../upcrop-insta-dialog/upcrop-insta-dialog.component";
-import { Http, Headers, RequestOptions, URLSearchParams, RequestMethod, Request, Jsonp } from "@angular/http";
+import { Http, Headers, RequestOptions, URLSearchParams, RequestMethod, Request, Jsonp, Response } from "@angular/http";
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
@@ -29,7 +29,7 @@ export class UpcropInstaService {
 
     constructor(
         public dialog: MdDialog,
-        private jsonp: Jsonp
+        public jsonp: Jsonp
     ) { }
 
 

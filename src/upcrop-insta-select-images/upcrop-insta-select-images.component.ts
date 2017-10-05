@@ -62,7 +62,7 @@ export class UpcropInstaSelectImagesComponent implements OnInit {
         // Set load
         this.load = true;
 
-        this.upcropInstaService.getInstagramImages(this.config.authService.instagramAccessToken, this.count, this.nextPageId).then((res) => {
+        this.upcropInstaService.getInstagramImages(this.config.authService.instagramAccessToken, this.count, this.nextPageId).then((res: any) => {
 
             // 
             // Validate data

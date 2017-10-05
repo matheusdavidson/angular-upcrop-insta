@@ -1,15 +1,22 @@
 import { OnInit } from '@angular/core';
 import { MdDialogRef } from "@angular/material";
 import { UpcropInstaCropComponent } from "../upcrop-insta-crop/upcrop-insta-crop.component";
+import { UpcropInstaUploadComponent } from '../upcrop-insta-upload/upcrop-insta-upload.component';
+import { UpcropInstaUploadService } from '../upcrop-insta/upcrop-insta-upload.service';
 export declare class UpcropInstaDialogComponent implements OnInit {
     dialogRef: MdDialogRef<UpcropInstaDialogComponent>;
+    upcropInstaUploadService: UpcropInstaUploadService;
     data: any;
     upcropCrop: UpcropInstaCropComponent;
+    upcropUpload: UpcropInstaUploadComponent;
+    load: any;
+    incSize: number;
     cropData: {};
     uploadedImages: any[];
-    uploader: any;
+    uploadQueue: any[];
     steps: any;
-    constructor(dialogRef: MdDialogRef<UpcropInstaDialogComponent>, data: any);
+    selectedInstagramPictures: any;
+    constructor(dialogRef: MdDialogRef<UpcropInstaDialogComponent>, upcropInstaUploadService: UpcropInstaUploadService, data: any);
     ngOnInit(): void;
     /**
      * Go to step 1
@@ -22,7 +29,6 @@ export declare class UpcropInstaDialogComponent implements OnInit {
     /**
      * Finish
      */
-    finish(): void;
     /**
      * Step 1 next button disabled conditions
      */
@@ -33,13 +39,35 @@ export declare class UpcropInstaDialogComponent implements OnInit {
      */
     onCropImage(event: any): void;
     /**
-     * On upload image event
-     * @param event
+     * On finish - Upload images
      */
-    onUploadImage(event: any): void;
+    onFinish(): Promise<void>;
+    /**
+     * Upload image
+     * @param image
+     */
+    uploadImage(image: any, mainResolve: any): Promise<{}>;
+    /**
+     * Upload next or return
+     */
+    uploadNextOrReturn(mainResolve: any, resolve: any): any;
+    /**
+     * Increase loading
+     */
+    increaseLoading(): void;
     /**
      * Create url params
      * @param obj
      */
     createUrlParams(obj: any): string;
+    /**
+     * On select picture
+     * @param event
+     */
+    onSelectInstagramPicture(event: any): void;
+    /**
+     * On unselect picture
+     * @param event
+     */
+    onUnselectInstagramPicture(event: any): void;
 }

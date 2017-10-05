@@ -26,7 +26,9 @@ export * from './upcrop-insta/upcrop-insta-upload.service';
         MdButtonModule,
         MdDialogModule,
         MdTooltipModule,
-        AngularCropperjsModule
+        AngularCropperjsModule,
+        HttpModule,
+        JsonpModule
     ],
     declarations: [
         UpcropInstaUploadComponent,
@@ -38,7 +40,9 @@ export * from './upcrop-insta/upcrop-insta-upload.service';
         UpcropInstaUploadComponent,
         UpcropInstaCropComponent,
         UpcropInstaDialogComponent,
-        UpcropInstaSelectImagesComponent
+        UpcropInstaSelectImagesComponent,
+        HttpModule,
+        JsonpModule
     ],
     entryComponents: [UpcropInstaDialogComponent]
 })

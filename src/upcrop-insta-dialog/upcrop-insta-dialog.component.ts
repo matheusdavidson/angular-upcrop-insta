@@ -200,7 +200,7 @@ export class UpcropInstaDialogComponent implements OnInit {
     uploadImage(image, mainResolve) {
         return new Promise((resolve, reject) => {
 
-            this.upcropInstaUploadService.upload(this.data.uploadConfig.url, image).then((uploaded) => {
+            this.upcropInstaUploadService.upload(this.data.uploadConfig.url, image).then((uploaded: any) => {
 
                 // 
                 // Add data to uploadedImages

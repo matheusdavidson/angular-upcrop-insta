@@ -3,8 +3,9 @@ import { AngularCropperjsComponent } from 'angular-cropperjs';
 export declare class UpcropInstaCropComponent implements OnInit {
     angularCropper: AngularCropperjsComponent;
     config: any;
-    uploader: any;
+    selectedInstagramPictures: any;
     onCropImage: EventEmitter<{}>;
+    onFinish: EventEmitter<{}>;
     uploading: any;
     current: any;
     currentNumber: any;
@@ -13,7 +14,7 @@ export declare class UpcropInstaCropComponent implements OnInit {
     /**
      * Set cropping and everything to start crop
      */
-    setCropping(uploader: any): void;
+    setCropping(): void;
     /**
      * Unset cropping
      */
