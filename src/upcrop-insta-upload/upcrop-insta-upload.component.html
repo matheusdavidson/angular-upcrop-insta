@@ -1,0 +1,22 @@
+<!-- MAIN LOAD -->
+<div main-loading [fxHide]="!config.authService.instagramLoginLoad">
+    <div class="spinner"></div>
+
+    <br>
+
+    <p>Aceite a permissão para logar com o instagram na outra janela que se abriu</p>
+</div>
+
+<div class="upcrop-insta-upload-container" [fxHide]="config.authService.instagramLoginLoad">
+
+    <!-- LOGIN WITH INSTAGRAM -->
+    <div class="full-width" *ngIf="!config.authService.instagramAccessToken">
+        <p>Para iniciar, entre com o seu instagram:</p>
+        <br>
+        <button class="full-width" md-raised-button color="accent" (click)="config.authService.loginWithInstagram()">Entrar no instagram</button>
+    </div>
+
+    <!-- SELECT IMAGES -->
+    <app-upcrop-insta-select-images [config]="config" (onSelectInstagramPicture)="onSelectInstagramPictureProxy($event)" (onUnselectInstagramPicture)="onUnselectInstagramPictureProxy($event)"
+        *ngIf="config.authService.instagramAccessToken"></app-upcrop-insta-select-images>
+</div>

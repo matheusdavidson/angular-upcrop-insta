@@ -1,35 +1,51 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SampleComponent } from './sample.component';
-import { SampleDirective } from './sample.directive';
-import { SamplePipe } from './sample.pipe';
-import { SampleService } from './sample.service';
+import { HttpModule, JsonpModule } from "@angular/http";
 
-export * from './sample.component';
-export * from './sample.directive';
-export * from './sample.pipe';
-export * from './sample.service';
+import { UpcropInstaUploadComponent } from './upcrop-insta-upload/upcrop-insta-upload.component';
+import { UpcropInstaSelectImagesComponent } from './upcrop-insta-select-images/upcrop-insta-select-images.component';
+import { UpcropInstaCropComponent } from './upcrop-insta-crop/upcrop-insta-crop.component';
+import { UpcropInstaDialogComponent } from './upcrop-insta-dialog/upcrop-insta-dialog.component';
+import { FlexLayoutModule } from "@angular/flex-layout";
+import { MdCardModule, MdIconModule, MdButtonModule, MdDialogModule, MdTooltipModule } from "@angular/material";
+import { AngularCropperjsModule } from 'angular-cropperjs';
+
+export * from './upcrop-insta-upload/upcrop-insta-upload.component';
+export * from './upcrop-insta-select-images/upcrop-insta-select-images.component';
+export * from './upcrop-insta-crop/upcrop-insta-crop.component';
+export * from './upcrop-insta-dialog/upcrop-insta-dialog.component';
+export * from './upcrop-insta/upcrop-insta.service';
+export * from './upcrop-insta/upcrop-insta-upload.service';
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
-  declarations: [
-    SampleComponent,
-    SampleDirective,
-    SamplePipe
-  ],
-  exports: [
-    SampleComponent,
-    SampleDirective,
-    SamplePipe
-  ]
+    imports: [
+        CommonModule,
+        FlexLayoutModule,
+        MdCardModule,
+        MdIconModule,
+        MdButtonModule,
+        MdDialogModule,
+        MdTooltipModule,
+        AngularCropperjsModule
+    ],
+    declarations: [
+        UpcropInstaUploadComponent,
+        UpcropInstaCropComponent,
+        UpcropInstaDialogComponent,
+        UpcropInstaSelectImagesComponent
+    ],
+    exports: [
+        UpcropInstaUploadComponent,
+        UpcropInstaCropComponent,
+        UpcropInstaDialogComponent,
+        UpcropInstaSelectImagesComponent
+    ],
+    entryComponents: [UpcropInstaDialogComponent]
 })
-export class SampleModule {
-  static forRoot(): ModuleWithProviders {
-    return {
-      ngModule: SampleModule,
-      providers: [SampleService]
-    };
-  }
+export class AngularUpcropInstaModule {
+    static forRoot(): ModuleWithProviders {
+        return {
+            ngModule: AngularUpcropInstaModule
+        };
+    }
 }

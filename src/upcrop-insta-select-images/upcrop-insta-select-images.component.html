@@ -1,0 +1,44 @@
+<!-- MAIN LOAD -->
+<div main-loading [fxHide]="!load || instagramImages.length">
+    <div class="spinner"></div>
+</div>
+
+<!-- NO ENTRIES -->
+<div no-entries [fxHide]="load || instagramImages.length">
+    <div no-entries-content>
+        <md-icon>texture</md-icon>
+        <h1 class="mat-title">Nenhuma imagem</h1>
+        <h2 class="mat-subhead">Nenhuma imagem para exibir no momento</h2>
+    </div>
+</div>
+
+<!-- IMAGES -->
+<div class="images-list-items-container" fxLayout="column" fxLayout.gt-xs="row" fxLayoutGap="16px" fxLayoutWrap="none" fxLayoutWrap.gt-xs>
+    <md-card class="images-list-item" [ngClass]="{'selected': item.selected}" fxFlex="0 0 none" fxFlex.gt-xs="0 0 calc(33.3333% - 16px)"
+        *ngFor="let item of instagramImages">
+
+        <div class="card-background-image" [style.backgroundImage]="'url('+ item.images.low_resolution.url +')'"></div>
+
+        <md-card-content>
+            <p truncate>{{item.name}}</p>
+        </md-card-content>
+
+        <md-card-footer fxLayout>
+            <button md-button fxFlex [fxHide]="item.selected" (click)="selectPicture(item)">
+                <md-icon>check_box_outline_blank</md-icon>
+                Selecionar
+            </button>
+
+            <button class="has-text-success" md-button fxFlex [fxHide]="!item.selected" (click)="unselectPicture(item)">
+                <md-icon>check</md-icon>
+                Selecionado
+            </button>
+        </md-card-footer>
+
+    </md-card>
+</div>
+
+<!-- LOAD MORE -->
+<div class="full-width" [hidden]="nextPageId == false">
+    <button class="full-width" md-raised-button color="primary" [ngClass]="{'is-loading': load}" (click)="getInstagramImages()">Carregar mais imagens</button>
+</div>
