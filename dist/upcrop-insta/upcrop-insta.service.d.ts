@@ -1,13 +1,13 @@
-import { MdDialog } from "@angular/material";
+import { MatDialog } from "@angular/material";
 import { Jsonp, Response } from "@angular/http";
 import 'rxjs/add/operator/toPromise';
 export declare class UpcropInstaService {
-    dialog: MdDialog;
+    dialog: MatDialog;
     jsonp: Jsonp;
     dialogConfig: any;
     uploadConfig: any;
     cropConfig: any;
-    constructor(dialog: MdDialog, jsonp: Jsonp);
+    constructor(dialog: MatDialog, jsonp: Jsonp);
     /**
      * Open dialog with uplaod & crop
      * @param {object} dialogConfig

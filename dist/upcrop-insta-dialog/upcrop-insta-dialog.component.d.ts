@@ -1,10 +1,10 @@
 import { OnInit } from '@angular/core';
-import { MdDialogRef } from "@angular/material";
+import { MatDialogRef } from "@angular/material";
 import { UpcropInstaCropComponent } from "../upcrop-insta-crop/upcrop-insta-crop.component";
 import { UpcropInstaUploadComponent } from '../upcrop-insta-upload/upcrop-insta-upload.component';
 import { UpcropInstaUploadService } from '../upcrop-insta/upcrop-insta-upload.service';
 export declare class UpcropInstaDialogComponent implements OnInit {
-    dialogRef: MdDialogRef<UpcropInstaDialogComponent>;
+    dialogRef: MatDialogRef<UpcropInstaDialogComponent>;
     upcropInstaUploadService: UpcropInstaUploadService;
     data: any;
     upcropCrop: UpcropInstaCropComponent;
@@ -16,7 +16,7 @@ export declare class UpcropInstaDialogComponent implements OnInit {
     uploadQueue: any[];
     steps: any;
     selectedInstagramPictures: any;
-    constructor(dialogRef: MdDialogRef<UpcropInstaDialogComponent>, upcropInstaUploadService: UpcropInstaUploadService, data: any);
+    constructor(dialogRef: MatDialogRef<UpcropInstaDialogComponent>, upcropInstaUploadService: UpcropInstaUploadService, data: any);
     ngOnInit(): void;
     /**
      * Go to step 1

@@ -1,6 +1,6 @@
 {
   "name": "angular-upcrop-insta",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/matheusdavidson/angular-upcrop-insta"
@@ -21,7 +21,7 @@
   "jsnext:main": "angular-upcrop-insta.js",
   "typings": "angular-upcrop-insta.d.ts",
   "peerDependencies": {
-    "@angular/core": "^4.0.0",
+    "@angular/core": "^4.4.3",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
   }

@@ -7,7 +7,7 @@ import { UpcropInstaSelectImagesComponent } from './upcrop-insta-select-images/u
 import { UpcropInstaCropComponent } from './upcrop-insta-crop/upcrop-insta-crop.component';
 import { UpcropInstaDialogComponent } from './upcrop-insta-dialog/upcrop-insta-dialog.component';
 import { FlexLayoutModule } from "@angular/flex-layout";
-import { MdCardModule, MdIconModule, MdButtonModule, MdDialogModule, MdTooltipModule } from "@angular/material";
+import { MatCardModule, MatIconModule, MatButtonModule, MatDialogModule, MatTooltipModule } from "@angular/material";
 import { AngularCropperjsModule } from 'angular-cropperjs';
 
 export * from './upcrop-insta-upload/upcrop-insta-upload.component';
@@ -21,11 +21,11 @@ export * from './upcrop-insta/upcrop-insta-upload.service';
     imports: [
         CommonModule,
         FlexLayoutModule,
-        MdCardModule,
-        MdIconModule,
-        MdButtonModule,
-        MdDialogModule,
-        MdTooltipModule,
+        MatCardModule,
+        MatIconModule,
+        MatButtonModule,
+        MatDialogModule,
+        MatTooltipModule,
         AngularCropperjsModule,
         HttpModule,
         JsonpModule

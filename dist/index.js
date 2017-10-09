@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Inject, Injectable, Input, NgModule, Output, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Headers, Http, HttpModule, Jsonp, JsonpModule, RequestMethod, RequestOptions } from '@angular/http';
-import { MD_DIALOG_DATA, MdButtonModule, MdCardModule, MdDialog, MdDialogModule, MdDialogRef, MdIconModule, MdTooltipModule } from '@angular/material';
+import { MAT_DIALOG_DATA, MatButtonModule, MatCardModule, MatDialog, MatDialogModule, MatDialogRef, MatIconModule, MatTooltipModule } from '@angular/material';
 import 'rxjs/add/operator/toPromise';
 import { remove } from 'lodash';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -393,9 +393,9 @@ UpcropInstaDialogComponent.decorators = [
  * @nocollapse
  */
 UpcropInstaDialogComponent.ctorParameters = function () { return [
-    { type: MdDialogRef, },
+    { type: MatDialogRef, },
     { type: UpcropInstaUploadService, },
-    { type: undefined, decorators: [{ type: Inject, args: [MD_DIALOG_DATA,] },] },
+    { type: undefined, decorators: [{ type: Inject, args: [MAT_DIALOG_DATA,] },] },
 ]; };
 UpcropInstaDialogComponent.propDecorators = {
     'upcropCrop': [{ type: ViewChild, args: ['upcropCrop',] },],
@@ -509,7 +509,7 @@ UpcropInstaService.decorators = [
  * @nocollapse
  */
 UpcropInstaService.ctorParameters = function () { return [
-    { type: MdDialog, },
+    { type: MatDialog, },
     { type: Jsonp, },
 ]; };
 
@@ -854,11 +854,11 @@ AngularUpcropInstaModule.decorators = [
                 imports: [
                     CommonModule,
                     FlexLayoutModule,
-                    MdCardModule,
-                    MdIconModule,
-                    MdButtonModule,
-                    MdDialogModule,
-                    MdTooltipModule,
+                    MatCardModule,
+                    MatIconModule,
+                    MatButtonModule,
+                    MatDialogModule,
+                    MatTooltipModule,
                     AngularCropperjsModule,
                     HttpModule,
                     JsonpModule
