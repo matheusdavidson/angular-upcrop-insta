@@ -1,3 +1,13 @@
+<a name="0.1.3"></a>
+## [0.1.3](https://github.com/matheusdavidson/angular-upcrop-insta/compare/v0.1.2...v0.1.3) (2017-10-10)
+
+
+### Bug Fixes
+
+* **upgrade/material:** change material components “md-“ prefix to “mat-“ ([ce0fa92](https://github.com/matheusdavidson/angular-upcrop-insta/commit/ce0fa92))
+
+
+
 <a name="0.1.2"></a>
 ## 0.1.2 (2017-10-09)
 
