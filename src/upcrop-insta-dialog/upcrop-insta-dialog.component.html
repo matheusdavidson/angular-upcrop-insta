@@ -1,15 +1,15 @@
-<h2 md-dialog-title class="has-text-danger">
+<h2 mat-dialog-title class="has-text-danger">
     Imagens do instagram
     <small>com corte</small>
 </h2>
-<md-dialog-content>
+<mat-dialog-content>
 
     <!-- STEPS -->
     <div steps>
         <div steps-content fxLayout="row" fxLayoutAlign="start center">
-            <button md-icon-button fxHide.xs [disabled]="!steps.current.previus || (steps.current.previusDisabled && steps.current.previusDisabled())"
+            <button mat-icon-button fxHide.xs [disabled]="!steps.current.previus || (steps.current.previusDisabled && steps.current.previusDisabled())"
                 (click)="steps.current.previusAction()">
-                <md-icon>keyboard_arrow_left</md-icon>
+                <mat-icon>keyboard_arrow_left</mat-icon>
             </button>
             <span fxFlex></span>
             <h3>Passo
@@ -18,9 +18,9 @@
                 <span class="has-text-primary">{{steps.current.label}}</span>
             </h3>
             <span fxFlex></span>
-            <button md-icon-button fxHide.xs [disabled]="!steps.current.next || (steps.current.nextDisabled && steps.current.nextDisabled())"
+            <button mat-icon-button fxHide.xs [disabled]="!steps.current.next || (steps.current.nextDisabled && steps.current.nextDisabled())"
                 (click)="steps.current.nextAction()">
-                <md-icon>keyboard_arrow_right</md-icon>
+                <mat-icon>keyboard_arrow_right</mat-icon>
             </button>
         </div>
     </div>
@@ -45,17 +45,17 @@
 
         <p>Subindo images, progresso: {{load}}%</p>
     </div>
-</md-dialog-content>
-<md-dialog-actions *ngIf="steps.current.number == 1">
-    <button md-button md-dialog-close>Fechar</button>
-    <button md-button color="primary" [disabled]="!selectedInstagramPictures.length" (click)="goToStep2()">Continuar</button>
-</md-dialog-actions>
-<md-dialog-actions *ngIf="steps.current.number == 2">
-    <button md-button (click)="goToStep1()">Voltar</button>
+</mat-dialog-content>
+<mat-dialog-actions *ngIf="steps.current.number == 1">
+    <button mat-button mat-dialog-close>Fechar</button>
+    <button mat-button color="primary" [disabled]="!selectedInstagramPictures.length" (click)="goToStep2()">Continuar</button>
+</mat-dialog-actions>
+<mat-dialog-actions *ngIf="steps.current.number == 2">
+    <button mat-button (click)="goToStep1()">Voltar</button>
 
-    <button md-button color="primary" [fxHide]="upcropCrop.selectedInstagramPictures.length == (upcropCrop.currentNumber + 1)"
+    <button mat-button color="primary" [fxHide]="upcropCrop.selectedInstagramPictures.length == (upcropCrop.currentNumber + 1)"
         (click)="upcropCrop.goToNextCrop()">Próxima imagem</button>
 
-    <button md-button color="primary" [fxHide]="upcropCrop.selectedInstagramPictures.length > (upcropCrop.currentNumber + 1)"
+    <button mat-button color="primary" [fxHide]="upcropCrop.selectedInstagramPictures.length > (upcropCrop.currentNumber + 1)"
         [disabled]="upcropCrop.uploading" (click)="upcropCrop.goToNextCrop()">Concluir</button>
-</md-dialog-actions>
+</mat-dialog-actions>

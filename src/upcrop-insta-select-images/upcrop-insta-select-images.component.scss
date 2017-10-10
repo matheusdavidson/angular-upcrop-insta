@@ -18,7 +18,7 @@
     padding: 16px 0;
 }
 
-md-card-footer {
+mat-card-footer {
     border-top: 1px solid rgba(0, 0, 0, .1);
     button {
         padding: 8px 0;
@@ -30,7 +30,7 @@ md-card-footer {
     @media (max-width: 599px) {
         margin-right: 0px;
     }
-    [md-card-image] {
+    [mat-card-image] {
         cursor: pointer;
     }
 }

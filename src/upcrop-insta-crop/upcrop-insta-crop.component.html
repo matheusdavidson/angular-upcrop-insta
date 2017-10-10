@@ -12,32 +12,32 @@
 
     <!--CROPPER CONTROLS-->
     <div class="crop-controls" fxLayout fxLayoutAlign="center center" fxLayoutWrap *ngIf="current && current.images.standard_resolution.url">
-        <button md-button (click)="zoomIn()" class="md-icon-button" aria-label="Aumentar zoom" mdTooltip="Aumentar zoom">
-            <md-icon>zoom_in</md-icon>
+        <button mat-button (click)="zoomIn()" class="mat-icon-button" aria-label="Aumentar zoom" mdTooltip="Aumentar zoom">
+            <mat-icon>zoom_in</mat-icon>
         </button>
 
-        <button md-button (click)="zoomOut()" class="md-icon-button" aria-label="Diminuir zoom" mdTooltip="Diminuir zoom">
-            <md-icon>zoom_out</md-icon>
+        <button mat-button (click)="zoomOut()" class="mat-icon-button" aria-label="Diminuir zoom" mdTooltip="Diminuir zoom">
+            <mat-icon>zoom_out</mat-icon>
         </button>
 
-        <button md-button (click)="goLeft()" class="md-icon-button" aria-label="Mover para esquerda" mdTooltip="Mover para esquerda">
-            <md-icon>keyboard_arrow_left</md-icon>
+        <button mat-button (click)="goLeft()" class="mat-icon-button" aria-label="Mover para esquerda" mdTooltip="Mover para esquerda">
+            <mat-icon>keyboard_arrow_left</mat-icon>
         </button>
 
-        <button md-button (click)="goRight()" class="md-icon-button" aria-label="Mover para direita" mdTooltip="Mover para direita">
-            <md-icon>keyboard_arrow_right</md-icon>
+        <button mat-button (click)="goRight()" class="mat-icon-button" aria-label="Mover para direita" mdTooltip="Mover para direita">
+            <mat-icon>keyboard_arrow_right</mat-icon>
         </button>
 
-        <button md-button (click)="goUp()" class="md-icon-button" aria-label="Mover para cima" mdTooltip="Mover para cima">
-            <md-icon>keyboard_arrow_up</md-icon>
+        <button mat-button (click)="goUp()" class="mat-icon-button" aria-label="Mover para cima" mdTooltip="Mover para cima">
+            <mat-icon>keyboard_arrow_up</mat-icon>
         </button>
 
-        <button md-button (click)="goDown()" class="md-icon-button" aria-label="Mover para baixo" mdTooltip="Mover para baixo">
-            <md-icon>keyboard_arrow_down</md-icon>
+        <button mat-button (click)="goDown()" class="mat-icon-button" aria-label="Mover para baixo" mdTooltip="Mover para baixo">
+            <mat-icon>keyboard_arrow_down</mat-icon>
         </button>
 
-        <button md-button (click)="reset()" class="md-icon-button md-primary" aria-label="Restaurar imagem original" mdTooltip="Restaurar imagem original">
-            <md-icon>cached</md-icon>
+        <button mat-button (click)="reset()" class="mat-icon-button mat-primary" aria-label="Restaurar imagem original" mdTooltip="Restaurar imagem original">
+            <mat-icon>cached</mat-icon>
         </button>
     </div>
 </div>
