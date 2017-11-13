@@ -28,7 +28,7 @@
     <!-- STEP 1 / UPLOAD -->
     <div class="step-1" [hidden]="steps.current.number != 1">
         <app-upcrop-insta-upload #upcropUpload [config]="data.uploadConfig" (onSelectInstagramPicture)="onSelectInstagramPicture($event)"
-            (onUnselectInstagramPicture)="onUnselectInstagramPicture($event)" (onUploadImage)="onUploadImage($event)"></app-upcrop-insta-upload>
+            (onUnselectInstagramPicture)="onUnselectInstagramPicture($event)"></app-upcrop-insta-upload>
     </div>
 
     <!-- STEP 2 / CROP -->
